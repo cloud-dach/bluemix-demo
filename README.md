@@ -10,7 +10,7 @@ This simple tutorial / demo shows how simple and incredible fast it is to deploy
 
 This can take days, weeks, or even months to finish. With Bluemix this time can be reduced to minutes.
 
-### 1
+### 1 Create an App
 Log on to Bluemix and make sure you have selected United Kingdom as region. 
 https://console.eu-gb.bluemix.net/
 Go to dashboard, select a space on the menu to the left, and click on “Create an App”
@@ -36,10 +36,33 @@ Click finish. The app gets created and you are set on the “Start Coding” pag
 
 ![start coding](/docs/start-coding.png)
 
-![download cf](/docs/download-cf.png)
+### 2 Setup
 
-![download zip](/docs/download-zip.png)
+In general the following steps have already been done. In this example we do it at this stage because the "Start Coding" page helps us with instructions.
+First we need to download the cf (CloudFoundry) tool. With the cf tool we can log on to Bluemix, upload updated applications, and a lot more which is beyond the scope of this demo. For simplicity download a binary version of the cf tool for your platform. The binaries can be used without the need to installing it. Save the archive to folder on your machine.
+
+![downloadcf](/docs/download-cf.png)
+
+Download the sample code of our simple web application from https://github.com/cloud-dach/bluemix-demo click on "Download Zip"
+
+![downloadzip](/docs/download-zip.png)
+
+Extract the zip to some folder then copy and extract the cf tool to the same folder.
+
+### 3 Upload App
+
+This is step 3 to 6 as shown on the "Start Coding" page. Open a terminal (cmd) and change directory to the folder where you extracted the sample code. Execute step 4 by simple copying the command to the clipbord. DO this by click on the copy button at the right end of the command shown. Paste this command into the terminal and press enter. Do the same for step 5. You are promted for your password which is the one you logged on to Bluemix.
 
 ![login](/docs/login.png)
+
+Now we can upload the application. Arrange your windows as shown in the screen shot below. THis way you can best observe what happens when uploading the app. Type or copy/paste the command shown in step 5. Because the downloaded sample code has a configuration file we did not change, we have to add the parameter -n to the command. This defines the host name and should be identical to the application name already there.
+
+Example:
+
+```
+cf push rjh-0105 -n rjh-0105
+```
+
+Press enter and watch the windows. Once the process has finished after aproximately 30 seconds, click on the link next to "Route" in the upper area of the Bluemix console. This opens the sample application.
 
 ![push](/docs/push.png)
