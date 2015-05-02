@@ -14,6 +14,8 @@
 
 ![start coding](/docs/start-coding.png)
 
+![download zip](/docs/download-zip.png)
+
 ![login](/docs/login.png)
 
 ![push](/docs/push.png)
